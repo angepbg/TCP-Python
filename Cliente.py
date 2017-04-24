@@ -8,8 +8,8 @@ BUFFER_SIZE = 1024
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #Se crea un socket indicando en el constructor:
 # -socket.AF_INET que permite la comunicación utilizando protocolos de Internet como TCP o UDP
-# -socket.SOCK_STREAM es una de clasificación de flujo, se usa dependiendo si el servicio utiliza TCP, de lo contrario
-# se utilizaría socket.SOCK_DGRAM
+# -socket.SOCK_STREAM es una de las clasificación de socket, se utiliza si el servicio desea usar TCP, 
+# de lo contrario se utilizaría socket.SOCK_DGRAM para UDP
 
 client.connect((TCP_IP, TCP_PORT))
 #Se establece la conexión con el servidor, la función connect() lleva como argumento:
