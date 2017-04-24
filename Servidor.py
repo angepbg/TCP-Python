@@ -5,7 +5,12 @@ TCP_IP = "192.168.1.104"
 TCP_PORT = 5000
 BUFFER_SIZE = 1024  # Normally 1024, but we want fast response 
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+#Se crea un socket indicando en el constructor:
+# -socket.AF_INET que permite la comunicación utilizando protocolos de Internet como TCP o UDP
+# -socket.SOCK_STREAM es una de clasificación de flujo, se usa dependiendo si el servicio utiliza TCP, de lo contrario
+# se utilizaría socket.SOCK_DGRAM
+
 server.bind((TCP_IP, TCP_PORT))
 server.listen(1)
 socket_c, (host_c, addr_c) = server.accept()
